@@ -47,7 +47,9 @@ MODE.map((m) => {
             /@babel\/runtime/
         ],
         plugins: [
-            resolve(),
+            resolve({
+                extensions: [".js", ".jsx", ".ts", ".tsx"],
+            }),
             // these are babel comfigurations
             babel({
                 exclude: ['node_modules/**'],
